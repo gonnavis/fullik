@@ -1,6 +1,6 @@
 tell("Demo 4 - Freely Rotating Global Hinges");
 
-var numChains = 3;
+var numChains = 1;
 var rotStep = 360 / numChains;
 var baseBoneConstraintAngleDegs = 20;
 var globalHingeAxis;
@@ -24,10 +24,11 @@ for (var i = 0; i < numChains; i++ ){
     chain.addBone( basebone );
 
 
-    for (var j = 0; j < 7; j++) {
+    for (var j = 0; j < 2; j++) {
 
-        if (j % 2 == 0) chain.addConsecutiveFreelyRotatingHingedBone( defaultBoneDirection, defaultBoneLength, 'global', globalHingeAxis );
-        else chain.addConsecutiveBone( defaultBoneDirection, defaultBoneLength );
+        // if (j % 2 == 0) 
+        chain.addConsecutiveFreelyRotatingHingedBone( defaultBoneDirection, defaultBoneLength, 'global', globalHingeAxis );
+        // else chain.addConsecutiveBone( defaultBoneDirection, defaultBoneLength );
 
     };
 
