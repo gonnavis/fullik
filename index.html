@@ -344,6 +344,8 @@
         TWEEN.update();
         renderer.render( scene, camera );
 
+        if (solver.meshChains[0]) console.log(solver.meshChains[0][1].rotation.y);
+
     }
 
 
